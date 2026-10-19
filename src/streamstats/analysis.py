@@ -4,6 +4,7 @@ from typing import Any
 
 from .models import Event
 
+
 class Analyzer:
     """Накопитель статистики; все файлы обрабатываются одним экземпляром."""
 
