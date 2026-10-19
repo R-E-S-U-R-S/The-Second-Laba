@@ -1,0 +1,15 @@
+{"timestamp": "2026-10-19T09:00:00+03:00", "level": "INFO", "source": "auth", "message": "Пользователь успешно вошёл"}
+{"timestamp": "2026-10-19T09:00:03+03:00", "level": "DEBUG", "source": "auth", "message": "Проверка токена завершена"}
+{"timestamp": "2026-10-19T09:01:15+03:00", "level": "WARNING", "source": "api", "message": "Высокая задержка ответа"}
+{"timestamp": "2026-10-19T09:02:40+03:00", "level": "ERROR", "source": "database", "message": "Не удалось выполнить запрос"}
+{"timestamp": "2026-10-19T09:03:10+03:00", "level": "CRITICAL", "source": "database", "message": "Соединение с БД потеряно"}
+{"timestamp": "2026-10-19T09:04:00+03:00", "level": "ERROR", "source": "api", "message": "Ошибка обработки запроса"}
+{"timestamp": "2026-10-19T09:05:00+03:00", "level": "INFO", "source": "worker", "message": "Задача завершена: отчёт № 42"}
+{"timestamp": "2026-10-19T09:06:00+03:00", "level": "ERROR", "source": "auth", "message": "Не удалось обновить токен"}
+{"timestamp": "2026-10-19T09:07:00+03:00", "level": "WARNING", "source": "worker", "message": "Повторная попытка выполнения задачи"}
+{"timestamp": "2026-10-19T09:08:00+03:00", "level": "ERROR", "source": "database", "message": "Тайм-аут при чтении данных"}
+{"timestamp": "2026-10-19T09:09:00+03:00", "level": "INFO", "source": "api", "message": "Обработка завершена"}
+{"timestamp": "2026-10-19T09:10:00+03:00", "level": "ERROR", "source": "cache", "message": "Ошибка записи в кэш"}
+{"timestamp": "2026-10-19T09:11:00+03:00", "level": "ERROR", "source": "cache", "message": "Повторная ошибка записи в кэш"}
+{"timestamp": "2026-10-19T09:12:00+03:00", "level": "INFO", "source": "worker", "message": "Обработан файл: данные.csv"}
+{"timestamp": "2026-10-19T09:13:00+03:00", "level": "CRITICAL", "source": "api", "message": "Сервис временно недоступен"}
