@@ -18,7 +18,7 @@ class RawRecord:
 
 
 def jsonl_reader(file, path: Path):
-    for line_number, line in enumerate(file):
+    for line_number, line in enumerate(file, start=1):
         try:
             value = json.loads(line)
         except json.JSONDecodeError as exc:

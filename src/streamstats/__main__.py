@@ -6,7 +6,7 @@ from collections.abc import Sequence
 from pathlib import Path
 
 from .analysis import Analyzer
-from .errors import InvalidEventError, StreamStatsError
+from .errors import InvalidEventError, StreamStatsError, InvalidTimestampError
 from .models import parse_event
 from .parser import iter_records
 from .report import write_report
@@ -43,15 +43,20 @@ def analyze_files(inputs: Sequence[str], input_format: str, output: str, skip_in
                 try:
                     if raw.error_message is not None:
                         raise InvalidEventError(raw.error_message)
+
                     event = parse_event(raw.data)
-                except InvalidEventError as exc:
+
+                except (InvalidEventError, InvalidTimestampError) as exc:
                     message = f"{raw.path}:{raw.line_number}: {exc}"
+
                     if not skip_invalid:
                         logger.error(message)
                         return 2
+
                     analyzer.mark_skipped()
                     logger.warning("%s — запись пропущена", message)
                     continue
+
                 analyzer.add(event)
         except StreamStatsError as exc:
             logger.error("%s: %s", path, exc)

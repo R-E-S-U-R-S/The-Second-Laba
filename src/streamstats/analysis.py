@@ -8,7 +8,7 @@ from .models import Event
 class Analyzer:
     """Накопитель статистики; все файлы обрабатываются одним экземпляром."""
 
-    def init(self) -> None:
+    def __init__(self) -> None:
         self.total_events = 0
         self.by_level: Counter[str] = Counter()
         self.by_source: Counter[str] = Counter()
